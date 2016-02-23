@@ -1,20 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/leslie/fish/:name/:from', function(req, res, next) {
-
-  var param_name = req.params.name;
-  // var capital_name = param_name.charAt(0).toUpperCase() + param_name.slice(1);
-
-  var sender = req.params.from;
-  // var capital_sender = sender.charAt(0).toUpperCase() + sender.slice(1);
-
-  res.render('compliment', {
-    compliment: param_name + ', you beautiful tropical fish. You’re smart as a whip and you’re cool under pressure.',
-    from: sender
-  });
-});
-
 router.get('/pg/:name/:from', function(req, res, next) {
 
   var param_name = req.params.name;
@@ -38,7 +24,7 @@ router.get('/elf/:name/', function(req, res, next) {
 
 router.get('/zoolander/:from/', function(req, res, next) {
 
-  var sender = req.params.from
+  var sender = req.params.from;
 
   res.render('compliment', {
     compliment: 'I friggin\' worship you, man!',
@@ -46,4 +32,17 @@ router.get('/zoolander/:from/', function(req, res, next) {
   });
 });
 
+router.get('/groundhog/:name/:from', function(req, res, next) {
+
+  var param_name = req.params.name;
+  var sender = req.params.from;
+
+  res.render('compliment', {
+    compliment: param_name + ' you like boats, but not the ocean. You go to a lake in the summer with your family up in the mountains. There\'s a long wooden dock and a boathouse with boards missing from the roof, and a place you used to crawl underneath to be alone. You\'re a sucker for French poetry and rhinestones. You\'re very generous. You\'re kind to strangers and children, and when you stand in the snow you look like an angel.',
+    from: sender
+  });
+});
+
 module.exports = router;
+
+

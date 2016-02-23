@@ -1,15 +1,23 @@
 extends layout
 
 block content
+
+  .jumbotron
+    h1 CAAS
+    h3 Compliments as a Service
+
+  h1 Introduction
+  h6 CAAS (Compliments as a Service) is the cheap and scalable way to be nice. Stay top of mind in your network as it grows.
+  
+  br
+  br
+
   h3 Compliments
   table.table
     tbody
       tr
         th Path
         th Description
-      tr
-        td /leslie/fish/:name/:from
-        td Will return ':name, you beautiful tropical fish. You’re smart as a whip and you’re cool under pressure. - :from', e.g. <a href="/leslie/fish/Ann/Leslie">/leslie/fish/Ann/Leslie</a>
       tr
         td /pg/:name/:from
         td Will return ':name, your hear is as warm as my mother's freshly baked banana bread.', e.g. <a href="/pg/Victoria/Mr.%20Girgis">/pg/Victoria/Mr.%20Girgis</a> 
@@ -19,3 +27,30 @@ block content
       tr
         td /zoolander/:from
         td Will return 'I friggin' worship you, man! - :from', e.g. <a href="/zoolander/Hansel">/zoolander/Hansel</a>
+      tr
+        td /groundhog/:name/:from
+        td Will return ':name, you like boats, but not the ocean. You go to a lake in the summer with your family up in the mountains. There's a long wooden dock and a boathouse with boards missing from the roof, and a place you used to crawl underneath to be alone. You're a sucker for French poetry and rhinestones. You're very generous. You're kind to strangers and children, and when you stand in the snow you look like an angel. - :from', e.g. <a href="/groundhog/Rita/Phil">/groundhog/Rita/Phil</a>
+
+
+  h3 Ann &amp Leslie
+  table.table
+    tbody
+      tr
+        th Path
+        th Description
+      tr
+        td /leslie/fish/:name/:from
+        td Will return ':name, you beautiful tropical fish. You’re smart as a whip and you’re cool under pressure. - :from', e.g. <a href="/leslie/fish/Ann/Leslie">/leslie/fish/Ann/Leslie</a>
+      tr
+        td /moth/:name/:from
+        td Will return 'Oh, :name, you beautiful, rule-breaking moth. - :from', e.g. <a href="/moth/Ann/Leslie">/moth/Ann/Leslie</a>
+      tr
+        td /ox/:name/:from
+        td Will return ':name, you are such a good friend, you’re a beautiful, talented, brilliant, powerful musk-ox. Thank you, ox. - :from', e.g. <a href="/ox/Ann/Leslie">/ox/Ann/Leslie</a>
+      tr
+        td /unicorn/:name/:from
+        td Will return ':name, you know that I fully support any woman’s decision, especially a beautiful unicorn nurse like yourself, in creating the family that she wants. But you are so brilliant and kind and stupid hot, you’re definitely going to find a wonderful guy who loves you and respects you and fills your home with multiethnic genius babies. - :from', e.g. <a href="/unicorn/Ann/Leslie">/unicorn/Ann/Leslie</a>
+
+
+
+
