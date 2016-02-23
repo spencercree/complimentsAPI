@@ -7,7 +7,7 @@ router.get('/pg/:name/:from', function(req, res, next) {
   var sender = req.params.from;
 
   res.render('compliment', {
-    compliment: param_name + ', your hear is as warm as my mother\'s freshly baked banana bread.',
+    compliment: param_name + ', your heart is as warm as my mother\'s freshly baked banana bread.',
     from: sender
   });
 });
