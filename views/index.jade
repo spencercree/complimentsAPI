@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3 Compliments
+  table.table
+    tbody
+      tr
+        th Path
+        th Description
+      tr
+        td /leslie/fish/:name/:from
+        td Will return ':name, you beautiful tropical fish. You’re smart as a whip and you’re cool under pressure. - :from', e.g. <a href="/leslie/fish/Ann/Leslie">/leslie/fish/Ann/Leslie</a>
+      tr
+        td /pg/:name/:from
+        td Will return ':name, your hear is as warm as my mother's freshly baked banana bread.', e.g. <a href="/pg/Victoria/Mr.%20Girgis">/pg/Victoria/Mr.%20Girgis</a> 
+      tr
+        td /elf/:name
+        td Will return 'You have such a pretty face :name, you should be a on a Christmas card! - Buddy the Elf', e.g. <a href="/elf/Deb">/elf/Deb</a>
+      tr
+        td /zoolander/:from
+        td Will return 'I friggin' worship you, man! - :from', e.g. <a href="/zoolander/Hansel">/zoolander/Hansel</a>
