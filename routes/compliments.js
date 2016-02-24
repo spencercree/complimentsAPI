@@ -17,7 +17,7 @@ router.get('/elf/:name/', function(req, res, next) {
   var param_name = req.params.name;
 
   res.render('compliment', {
-    compliment: param_name + ' you have such a pretty face, you should be a on a Christmas card!',
+    compliment: param_name + ', you have such a pretty face, you should be a on a Christmas card!',
     from: 'Buddy the Elf'
   });
 });
