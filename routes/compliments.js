@@ -79,11 +79,13 @@ router.get('/harry/:from', function(req, res, next) {
   });
 });
 
-router.get('/wethot/:from', function(req, res, next) {
+router.get('/wethot/:name/:from', function(req, res, next) {
+  
+  var param_name = req.params.name;
   var sender = req.params.from;
 
   res.render('compliment', {
-    compliment: 'When we first started hanging out together, this morning, we were just friends; but things change, and I\'ve fallen in love with you. I just know that if you gave me a chance, I could make you feel so good. So I am coming, not as your buddy, and not as a co-counselor, but for the first time as a man - a man who loves a woman, and who wants to hold her and provide for her and, yes, have sex with her; but no, seriously, Katie, I love the way you laugh and I love the way your hair smells and I love it that sometimes for no reason you\'re late for school, and I don\'t care that you\'re bowlegged and I don\'t care that you\'re bilingual - all I know is that I would have said no to every single person on your list because I\'ve always wanted you.',
+    compliment: 'When we first started hanging out together, this morning, we were just friends; but things change, and I\'ve fallen in love with you. I just know that if you gave me a chance, I could make you feel so good. So I am coming, not as your buddy, and not as a co-counselor, but for the first time as a man - a man who loves a woman, and who wants to hold her and provide for her and, yes, have sex with her; but no, seriously, ' + param_name + ', I love the way you laugh and I love the way your hair smells and I love it that sometimes for no reason you\'re late for school, and I don\'t care that you\'re bowlegged and I don\'t care that you\'re bilingual - all I know is that I would have said no to every single person on your list because I\'ve always wanted you.',
     from: sender
   });
 });
